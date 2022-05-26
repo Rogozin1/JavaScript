@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>task 1</title>
+</head>
+
+<body>
+
+  <script>
+    "use strict";
+    function getDigitsOfNumber(num) {
+      if (!Number.isInteger(num) || num < 0 || num > 999) {
+        console.log('целое число в диапазоне [0 .. 999].');
+        return {};
+      }
+
+      return {
+        hundereds: Math.floor(num / 100),
+        tens: Math.floor(num / 10) % 10,
+        units: num % 10,
+      };
+    }
+    console.log(getDigitsOfNumber(567));
+  </script>
+
+</body>
+
+</html>
