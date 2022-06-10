@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        for (let i = 0; i < 6; i++) {
+            let markup = `<img src="https://picsum.photos/200/300?random=${i}" alt="pic${i}">`;
+            document.body.insertAdjacentHTML('afterbegin', markup);
+        }
+    </script>
+</body>
+
+</html>
