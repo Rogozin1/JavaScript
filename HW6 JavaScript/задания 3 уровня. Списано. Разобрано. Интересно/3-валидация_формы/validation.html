@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            border-style: solid;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <input id="first" type="text"><br>
+        <br>
+        <input id="second" type="text"><br>
+        <br>
+        <button>Отправить</button>
+    </form>
+
+
+
+    <script>
+        'use strict';
+        let formEl = document.querySelector('form');
+        let firstInput = document.getElementById('first');
+        let secondInput = document.getElementById('second');
+
+        formEl.addEventListener('submit', function (event) {
+            let firstInputEmpty = firstInput.value === '';
+            let secondInputEmpty = secondInput.value === '';
+
+            if (firstInputEmpty) {
+                firstInput.style.borderColor = 'red';
+            }
+            if (secondInputEmpty) {
+                secondInput.style.borderColor = 'red';
+            }
+            if (firstInputEmpty || secondInputEmpty) {
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>
